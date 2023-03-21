@@ -1,6 +1,12 @@
 .lista-filmes {
-    max-width: 800px;
+    width: 85vw;
+    height: 400px;
     margin: 14px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .loading {
@@ -15,6 +21,9 @@
     background-color: #222;
     padding: 15px;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .lista-filmes strong {
@@ -52,4 +61,13 @@
 .lista-filmes a:hover {
     background-color: #444;
     color: chartreuse;
+}
+
+@media only screen and (max-width: 769px) {
+    .lista-filmes {
+        display: block;
+    }
+    .lista-filmes article {
+        flex-direction: column;
+    }
 }
